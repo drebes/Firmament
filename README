@@ -1,0 +1,30 @@
+
+FIRMAMENT is a packet processor aimed at communication fault injection
+which uses the netfilter framework of the Linux kernel.
+
+The firm_vm kernel module interprets faultlet applications created
+with the firm_asm assembler, for each packet that crosses any of
+the configured flows (IPv4 and IPv6 in and out).
+
+Faultlets can modify packet contents, delay, duplicate or drop
+packets, or manipulate packets in other advanced ways (specified
+by the user).
+
+To compile FIRMAMENT, just type make. You may have to edit the KSRC
+variable in module/Makefile to point to your current kernel build
+directory.
+
+The asm directory contains the firm_asm assembler and msa_mrif
+disassembler.
+
+The module directory contains the firm_vm kernel module.
+
+The faultlets directory contains some example faultlets.
+
+The doc directory contains documentation on creating your own
+faultlets, and instructions about installing and operating, and
+extending the tool.
+
+Enjoy,
+
+Roberto Jung Drebes <drebes@inf.ufrgs.br>
